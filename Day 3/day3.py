@@ -72,7 +72,10 @@ with open('input.txt', 'rt') as f:
         wrongItem = str(set(bag1).intersection(bag2))
         print("The wrong item is: " + wrongItem[2])
         print("It's priority value is: " + str(itemPriority[wrongItem[2]]))
+        # Add value of the current item's priority to the running total
         priorityTotal = priorityTotal + (itemPriority[wrongItem[2]])
+        # Reinitialize the bag lists
         bag1 = []
         bag2 = []
+    # Print the total of all priority values combined    
     print (priorityTotal)
